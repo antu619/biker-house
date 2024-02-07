@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html data-theme="light" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,16 @@
 
     <!-- CSS Styles -->
     <style>
-        .font-poppins{
+        /* Primary Styles */
+        .font-poppins {
             font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-image: linear-gradient(to left, rgba(117, 246, 136, 0), rgba(0, 0, 0, 0.932)), url("images/slider/biker.png");
+            margin: auto;
+            background-repeat: no-repeat;
         }
     </style>
 
@@ -16,42 +25,62 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="font-poppins">
     <!-- Header Section -->
-    <header>
+    <header class="bg-cover">
         <!-- Navbar -->
-        <nav class="w-[1180px] mx-auto mt-8">
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <nav class="w-full lg:w-[1180px] mx-auto lg:pt-8">
+            <div class="navbar">
+                    <div class="navbar-start">
+                        <a class="text-sm lg:text-xl p-2 border-2 border-[#E76F51] rounded-md font-bold text-white">rider<span
+                            class="text-xl lg:text-4xl text-[#E76F51]">House</span></a>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Item 1</a></li>
-                      <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
+                <div class="navbar-end">
+                    <div class="hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1 text-white">
+                            <li><a>Home</a></li>
+                            <li><a href="">Shop</a></li>
+                            <li><a>News</a></li>
+                            <li><a>Contact</a></li>
                         </ul>
-                      </li>
-                      <li><a>Item 3</a></li>
-                    </ul>
-                  </div>
-                  <a class="text-xl p-2 border-2 border-[#E76F51] rounded-md font-bold">rider<span class="text-4xl text-[#E76F51]">House</span></a>
+                        <a class="btn border-0 text-white bg-[#E76F51] font-bold px-8 text-lg hover:bg-[#E76F51]">Login</a>
+                    </div>
+                    <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Item 1</a></li>
+                            <li>
+                                <a>Parent</a>
+                                <ul class="p-2">
+                                    <li><a>Submenu 1</a></li>
+                                    <li><a>Submenu 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>Item 3</a></li>
+                            <li><a class="btn border-0 text-white bg-[#E76F51] font-bold px-8 text-lg hover:bg-[#E76F51]">Login</a></li>
+                        </ul>
+                        
+                    </div>
+                    
                 </div>
-                <div class="navbar-end hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a>News</a></li>
-                    <li><a>Contact</a></li>
-                  </ul>
-                  <a class="btn text-white bg-[#E76F51] font-bold px-8 text-lg hover:bg-[#E76F51]">Login</a>
-                </div>
-              </div>
+            </div>
         </nav>
+        <!-- Banner Section -->
+        <div class="banner pl-2 lg:pl-[135px] mt-3 md:mt-10 lg:mt-36 pb-5 mb:pb-8 lg:pb-28">
+            <h1 class="text-2xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">Keep Your Ride Safe<br> At Every Time</h1>
+            <p class="hidden md:block lg:block text-md text-white tracking-wide md:mt-3 lg:mt-6">Amet minim mollit non deserunt ullamco est sit aliqua dolor<br> do amet sint. Velit officia consequat duis enim velit mollit. Exercitation<br> veniam consequat sunt nostrud
+            amet.</p>
+            <a class="btn border-0 text-white bg-[#E76F51] font-bold lg:px-10 text-lg hover:bg-[#E76F51] mt-3 md:mt-5 lg:mt-10 lg:h-16">Purchase</a>
+        </div>
     </header>
 </body>
+
 </html>
