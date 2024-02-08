@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biker - House</title>
 
+    <!-- Tailwind daisyUI CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Customs -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'pri-color': '#E76F51',
+                    }
+                }
+            }
+        }
+    </script>
+
     <!-- CSS Styles -->
     <style>
         /* Primary Styles */
@@ -20,10 +38,6 @@
             background-repeat: no-repeat;
         }
     </style>
-
-    <!-- Tailwind daisyUI CDN Link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="font-poppins">
@@ -32,10 +46,10 @@
         <!-- Navbar -->
         <nav class="w-full lg:w-[1180px] mx-auto lg:pt-8">
             <div class="navbar">
-                    <div class="navbar-start">
-                        <a class="text-sm lg:text-xl p-2 border-2 border-[#E76F51] rounded-md font-bold text-white">rider<span
-                            class="text-xl lg:text-4xl text-[#E76F51]">House</span></a>
-                    </div>
+                <div class="navbar-start">
+                    <a class="text-sm lg:text-xl p-2 border-2 border-pri-color rounded-md font-bold text-white">rider<span
+                            class="text-xl lg:text-4xl text-pri-color">House</span></a>
+                </div>
                 <div class="navbar-end">
                     <div class="hidden lg:flex">
                         <ul class="menu menu-horizontal px-1 text-white">
@@ -44,7 +58,8 @@
                             <li><a>News</a></li>
                             <li><a>Contact</a></li>
                         </ul>
-                        <a class="btn border-0 text-white bg-[#E76F51] font-bold px-8 text-lg hover:bg-[#E76F51]">Login</a>
+                        <a
+                            class="btn border-0 text-white bg-pri-color font-bold px-8 text-lg hover:bg-pri-color">Login</a>
                     </div>
                     <div class="dropdown dropdown-end">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
@@ -65,37 +80,99 @@
                                 </ul>
                             </li>
                             <li><a>Item 3</a></li>
-                            <li><a class="btn border-0 text-white bg-[#E76F51] font-bold px-8 text-lg hover:bg-[#E76F51]">Login</a></li>
+                            <li><a
+                                    class="btn border-0 text-white bg-pri-color font-bold px-8 text-lg hover:bg-pri-color">Login</a>
+                            </li>
                         </ul>
-                        
+
                     </div>
-                    
+
                 </div>
             </div>
         </nav>
         <!-- Banner Section -->
         <div class="banner pl-2 lg:pl-[135px] mt-3 md:mt-10 lg:mt-36 pb-5 mb:pb-8 lg:pb-28">
-            <h1 class="text-2xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">Keep Your Ride Safe<br> At Every Time</h1>
-            <p class="hidden md:block lg:block text-md text-white tracking-wide md:mt-3 lg:mt-6">Amet minim mollit non deserunt ullamco est sit aliqua dolor<br> do amet sint. Velit officia consequat duis enim velit mollit. Exercitation<br> veniam consequat sunt nostrud
-            amet.</p>
-            <a class="btn border-0 text-white bg-[#E76F51] font-bold lg:px-10 text-lg hover:bg-[#E76F51] mt-3 md:mt-5 lg:mt-10 lg:h-16">Purchase</a>
+            <h1 class="text-2xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">Keep Your Ride Safe<br> At
+                Every Time</h1>
+            <p class="hidden md:block lg:block text-md text-white tracking-wide md:mt-3 lg:mt-6">Amet minim mollit non
+                deserunt ullamco est sit aliqua dolor<br> do amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation<br> veniam consequat sunt nostrud
+                amet.</p>
+            <a
+                class="btn border-0 text-white bg-pri-color font-bold lg:px-10 text-lg hover:bg-pri-color mt-3 md:mt-5 lg:mt-10 lg:h-16">Purchase</a>
         </div>
     </header>
     <main class="w-full lg:w-[1180px] mx-auto">
         <!-- Featured Bikes -->
         <section class="text-center my-10 md:my-20 lg:my-28">
             <h2 class="text-xl md:text-3xl lg:text-5xl font-bold">Featured Bikes In This Year</h2>
-            <p class="mt-1 md:mt-2 lg:mt-5 text-[#E76F51]">Best Bike Collection</p>
+            <p class="mt-1 md:mt-2 lg:mt-5 text-pri-color">Best Bike Collection</p>
             <div class="w-full flex justify-center">
-                <div class="w-14 h-[1.5px] mt-1 bg-[#E76F51]"></div>
+                <div class="w-14 h-[1.5px] mt-1 bg-pri-color"></div>
             </div>
             <!-- Bikes Images -->
             <div class="w-full flex flex-col lg:flex-row justify-between items-center gap-5 mt-12">
                 <div><img src="images/slider/bike2.png" alt=""></div>
-            <div><img src="images/slider/bike3.png" alt=""></div>
-            <div><img src="images/slider/bike4.png" alt=""></div>
+                <div><img src="images/slider/bike3.png" alt=""></div>
+                <div><img src="images/slider/bike4.png" alt=""></div>
             </div>
         </section>
+        <!-- Latest Bikes -->
+        <section>
+            <h2 class="text-center text-xl md:text-3xl lg:text-5xl font-bold">Latest Bikes</h2>
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-16 px-5 md:px-10 lg:px-0">
+                <!-- Card 1 -->
+                <div class="card bg-base-100 shadow-xl border rounded-md">
+                    <figure class="px-5 pt-5">
+                        <img src="images/others/latest1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start">
+                        <h2 class="text-2xl font-bold">Ducati XDIAVEL S-73</h2>
+                        <p class="text-[#6C6C6C] mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                        <div class="card-actions">
+                            <button
+                                class="btn btn-outline hover:border-0 text-pri-color hover:text-white hover:bg-pri-color font-bold px-8 text-lg hover:bg-pri-color rounded-md">Read
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card bg-base-100 shadow-xl border rounded-md">
+                    <figure class="px-5 pt-5">
+                        <img src="images/others/latest2.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start">
+                        <h2 class="text-2xl font-bold">Motorcycles & Scooters</h2>
+                        <p class="text-[#6C6C6C] mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                        <div class="card-actions">
+                            <button
+                                class="btn btn-outline hover:border-0 text-pri-color hover:text-white hover:bg-pri-color font-bold px-8 text-lg hover:bg-pri-color rounded-md">Read
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card bg-base-100 shadow-xl border rounded-md">
+                    <figure class="px-5 pt-5">
+                        <img src="images/others/latest1.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-start">
+                        <h2 class="text-2xl font-bold">2021 Honda CBR500R</h2>
+                        <p class="text-[#6C6C6C] mt-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                        <div class="card-actions">
+                            <button
+                                class="btn btn-outline hover:border-0 text-pri-color hover:text-white hover:bg-pri-color font-bold px-8 text-lg hover:bg-pri-color rounded-md">Read
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 </body>
 
